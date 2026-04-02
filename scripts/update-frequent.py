@@ -112,7 +112,7 @@ def main():
         print(f"\n[{idx}/{len(FREQUENT_STATIONS)}] Обновление станции {wmo_id}...")
         
         try:
-            result = download_station_archive(wmo_id, START_DATE, END_DATE, OUTPUT_DIR)
+            result = download_station_archive(wmo_id, START_DATE, END_DATE)
             if result:
                 success += 1
                 print(f"✅ {wmo_id} - успешно")

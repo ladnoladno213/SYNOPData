@@ -55,7 +55,7 @@ def main():
             csv_file.unlink()
         
         # Скачиваем свежие данные
-        if downloader.download_station(wmo_id):
+        if downloader.download_station_archive(wmo_id, downloader.START_DATE, downloader.END_DATE):
             success += 1
         else:
             failed += 1

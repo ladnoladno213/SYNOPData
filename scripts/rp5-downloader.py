@@ -29,7 +29,7 @@ logging.basicConfig(
 )
 
 # Директория для сохранения CSV файлов
-OUTPUT_DIR = Path(__file__).parent / 'data' / 'rp5-csv'
+OUTPUT_DIR = Path(__file__).parent.parent / 'data'
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # Период данных
@@ -44,7 +44,7 @@ log_lock = Lock()
 
 def load_wmo_stations():
     """Загружает список WMO станций из wmo-mapping.js"""
-    wmo_file = Path(__file__).parent / 'data' / 'wmo-mapping.js'
+    wmo_file = Path(__file__).parent / 'wmo-mapping.js'
     
     if not wmo_file.exists():
         logging.error(f"Файл {wmo_file} не найден")

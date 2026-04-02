@@ -137,7 +137,7 @@ def main():
             print(f"[{wmo_id}] Удален старый файл")
         
         # Скачиваем свежие данные
-        if downloader.download_station(wmo_id):
+        if downloader.download_station_archive(wmo_id, downloader.START_DATE, downloader.END_DATE):
             success += 1
         else:
             failed += 1
